@@ -33,6 +33,7 @@ class EmailResource(object):
                 'JSON was incorrect.')
  
         resp.status = falcon.HTTP_202
+        msg = email_req['msg']
         config = {
           'user': os.getenv('MYSQL_USER', 'root'),
           'password': os.getenv('MYSQL_PASSWORD', ''),
